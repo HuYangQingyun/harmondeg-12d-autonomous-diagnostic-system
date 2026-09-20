@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "harmondeg12d-public"
+version = "1.0.0"
+description = "Autonomous structural diagnostic system implementing the Harmondeg Twelve-Dimensional Structural Evaluation Framework"
+requires-python = ">=3.10"
+authors = [{name = "Qingyun Hu-Yang"}]
+readme = "README.txt"
+
+[project.scripts]
+harmondeg12d = "harmondeg12d_public.cli:main"
+
+[project.optional-dependencies]
+pdf = ["pypdf>=4.0"]
+docx = ["python-docx>=1.0"]
+all = ["pypdf>=4.0", "python-docx>=1.0"]

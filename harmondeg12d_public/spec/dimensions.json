@@ -1,0 +1,419 @@
+{
+  "framework_version": "Harmondeg 12-D Autonomous Diagnostic System v1.0",
+  "spec_version": "1.0.0",
+  "score_range": [
+    -5,
+    5
+  ],
+  "statuses": [
+    "scored",
+    "IE",
+    "N/A"
+  ],
+  "confidence_levels": [
+    "High",
+    "Medium",
+    "Low"
+  ],
+  "critical_failure_requirements": [
+    "core_relevance",
+    "structural_dependence",
+    "failure_consequence"
+  ],
+  "deduplication_rule": "Related Diagnosis does not imply Duplicate Penalty. The same evidence may support multiple dimensions only when each dimension identifies a distinct structural mechanism; propagated effects must not be presented as independent source defects without evidence.. Do not multiply the same mechanism across multiple dimensions as separate severe penalties unless distinct mechanisms are demonstrated.",
+  "positive_score_requires": "active_management_evidence",
+  "dimensions": {
+    "D1": {
+      "code": "D1",
+      "name": "Level Collapse",
+      "group": "Orientation",
+      "diagnostic_core": [
+        "Level Identification",
+        "Transition Detection",
+        "Justification Check"
+      ],
+      "questions": [
+        "At what level(s) of analysis does the work operate?",
+        "Are conclusions from one level extended to another?",
+        "Has any cross-level transition been explicitly justified?"
+      ],
+      "boundary_note": "Cross-level inquiry is legitimate when the transition is argued. Collapse occurs when the transition is silent or unsupported.",
+      "anchors": {
+        "positive": "A scientific paper carefully separates empirical findings from philosophical interpretation and states the conditions under which the former may inform the latter.",
+        "negative": "Psychological laboratory results are presented as direct proof of a universal moral principle without additional normative argument.",
+        "neutral_or_na": "A purely formal mathematical proof that never leaves its own level."
+      },
+      "entry_gate": [
+        "two or more theory-relevant levels",
+        "material transition"
+      ],
+      "primary_test": "level_lock",
+      "execution_boundary": "different levels alone are not collapse"
+    },
+    "D2": {
+      "code": "D2",
+      "name": "Scope Overreach",
+      "group": "Orientation",
+      "diagnostic_core": [
+        "Scope Declaration",
+        "Evidence Base",
+        "Extension Check"
+      ],
+      "questions": [
+        "What range of application does the author claim or imply?",
+        "What evidence or argument actually supports that range?",
+        "Has the conclusion been extended beyond the conditions that justify it?"
+      ],
+      "boundary_note": "Explicit self-limitation of scope is not a defect. Ambition is not overreach; unsupported expansion is.",
+      "anchors": {
+        "positive": "A theory of local institutional design states its cultural and historical boundary conditions and refuses universal claims.",
+        "negative": "Findings from one demographic sample are presented as universal human nature without further justification.",
+        "neutral_or_na": "A narrowly scoped technical lemma that never claims broader application."
+      },
+      "entry_gate": [
+        "supported scope identifiable",
+        "claimed scope identifiable"
+      ],
+      "primary_test": "scope_compare",
+      "execution_boundary": "broad claim alone is not overreach; explicit limitation is management"
+    },
+    "D3": {
+      "code": "D3",
+      "name": "Definition Drift",
+      "group": "Orientation",
+      "diagnostic_core": [
+        "Initial Definition",
+        "Usage Tracking",
+        "Explicitness of Change"
+      ],
+      "questions": [
+        "How is the central term first defined?",
+        "Does the same term later perform a different conceptual function?",
+        "Is any change in meaning acknowledged and justified?"
+      ],
+      "boundary_note": "Conceptual development is legitimate when made explicit. Drift is the silent shift.",
+      "anchors": {
+        "positive": "An author introduces a technical term, later refines it, and marks the refinement with a clear redefinition.",
+        "negative": "A key term begins with one meaning and later silently performs another function while still treated as continuous.",
+        "neutral_or_na": "A short argument that uses each key term only once, in a fixed sense."
+      },
+      "entry_gate": [
+        "key term repeats across material inference"
+      ],
+      "primary_test": "meaning_lock",
+      "execution_boundary": "development/detail alone is not drift"
+    },
+    "D4": {
+      "code": "D4",
+      "name": "Observer Ambiguity",
+      "group": "Orientation",
+      "diagnostic_core": [
+        "Standpoint Identification",
+        "Stability",
+        "Transition Transparency"
+      ],
+      "questions": [
+        "From whose standpoint are the principal claims made?",
+        "Does that standpoint remain stable?",
+        "When the standpoint changes, is the change marked?"
+      ],
+      "boundary_note": "Multiple perspectives are valuable; unacknowledged switching is the defect.",
+      "anchors": {
+        "positive": "A historical study clearly distinguishes contemporary participant testimony from the historian's retrospective analysis.",
+        "negative": "A text moves from first-person lived experience to universal claims about humanity without marking the shift.",
+        "neutral_or_na": "A formal logical system with no observational standpoint claims."
+      },
+      "entry_gate": [
+        "observer/judgment position relevant"
+      ],
+      "primary_test": "observer_lock",
+      "execution_boundary": "subjectivity/self-reference alone is not ambiguity"
+    },
+    "D5": {
+      "code": "D5",
+      "name": "Temporal Flattening",
+      "group": "Orientation",
+      "diagnostic_core": [
+        "Process Identification",
+        "Static vs Dynamic",
+        "Preservation of Development"
+      ],
+      "questions": [
+        "Does the work treat processes that unfold in time as if they were static states?",
+        "Are developmental stages presented as permanent characteristics?",
+        "Is temporal structure preserved or compressed out of recognition?"
+      ],
+      "boundary_note": "Abstraction is necessary; erasing development is the problem.",
+      "anchors": {
+        "positive": "A developmental psychology account carefully limits stage-specific findings to the relevant age range.",
+        "negative": "Behaviour observed in a temporary crisis is treated as the permanent character of a people or institution.",
+        "neutral_or_na": "A purely synchronic formal model that makes no developmental claims."
+      },
+      "entry_gate": [
+        "temporal status/continuity/position/frame relevant"
+      ],
+      "primary_test": "temporal_restore",
+      "execution_boundary": "temporal vocabulary or analytic stages alone are not flattening"
+    },
+    "D6": {
+      "code": "D6",
+      "name": "Hidden Premises",
+      "group": "Structural Diagnosis",
+      "diagnostic_core": [
+        "Premise Identification",
+        "Premise Removal",
+        "Framework Removal"
+      ],
+      "questions": [
+        "Which premises are explicitly stated?",
+        "What must be true for the argument to work even though it is not stated?",
+        "If the suspected premise is removed, can the argument still proceed?",
+        "If an inherited framework is removed, does the system retain its structure?"
+      ],
+      "boundary_note": "An explicit premise is not a Hidden Premise. An inherited framework is not a defect merely because it is inherited.",
+      "anchors": {
+        "positive": "An author lists the background assumptions of their discipline and states which ones the present argument still requires.",
+        "negative": "A conclusion depends on an unstated maximising-rationality premise that carries the weight of the argument.",
+        "neutral_or_na": "A fully formalised proof in which every premise appears in the statement of the theorem."
+      },
+      "entry_gate": [
+        "reconstructable unstated condition",
+        "material dependency"
+      ],
+      "primary_test": "premise_removal",
+      "execution_boundary": "explicit premise or inherited framework alone is not hidden"
+    },
+    "D7": {
+      "code": "D7",
+      "name": "Category Confusion",
+      "group": "Structural Diagnosis",
+      "diagnostic_core": [
+        "Category Identification",
+        "Conditions",
+        "Boundary",
+        "Transition/Transfer",
+        "Separation"
+      ],
+      "questions": [
+        "What categories are being used?",
+        "What conditions make something a member of each category?",
+        "Are category boundaries maintained?",
+        "Is a property of one category transferred to another without an adequate bridge?",
+        "If the categories are separated, does the inference still work?"
+      ],
+      "boundary_note": "Similarity in appearance, behaviour, function, or outcome does not by itself establish category identity.",
+      "anchors": {
+        "positive": "A philosophy of mind text carefully distinguishes neural correlates from phenomenal experience and refuses to treat them as interchangeable.",
+        "negative": "A statistical correlation is treated as if it were a causal mechanism of the same ontological kind.",
+        "neutral_or_na": "A taxonomy that never transfers properties across its own categories."
+      },
+      "entry_gate": [
+        "distinct categories",
+        "material transfer/identity"
+      ],
+      "primary_test": "category_separation",
+      "execution_boundary": "shared behavior/property alone is not category identity"
+    },
+    "D8": {
+      "code": "D8",
+      "name": "Self-Reference Loops",
+      "group": "Structural Diagnosis",
+      "diagnostic_core": [
+        "External Independence",
+        "Return Edge",
+        "Loop-Break"
+      ],
+      "questions": [
+        "What premise or framework generates the conclusion?",
+        "Is the conclusion later used to validate that same premise or framework?",
+        "Is there genuinely independent evidence?",
+        "If the return edge is broken, does the justification survive?"
+      ],
+      "boundary_note": "Self-reference alone is not a defect. Legitimate self-application is distinct from circular self-validation.",
+      "anchors": {
+        "positive": "A methodological framework applies its own criteria to itself, openly records limitations, and remains open to external correction.",
+        "negative": "Every criticism of the system is reinterpreted as confirmation that the critic has not yet understood the system.",
+        "neutral_or_na": "A linear empirical argument that never refers its conclusions back to its own founding premise."
+      },
+      "entry_gate": [
+        "P generates C",
+        "C returns as support for P"
+      ],
+      "primary_test": "loop_break",
+      "execution_boundary": "self-reference/introspection/lack of external testability alone is not loop"
+    },
+    "D9": {
+      "code": "D9",
+      "name": "Context Erasure",
+      "group": "Structural Diagnosis",
+      "diagnostic_core": [
+        "Background Identification",
+        "Match",
+        "Preservation",
+        "Transition/Extension"
+      ],
+      "questions": [
+        "What background conditions does the work require?",
+        "Does the original argument match those conditions?",
+        "Are the conditions preserved as the claim expands or travels?",
+        "When context changes, is the change acknowledged?"
+      ],
+      "boundary_note": "Concepts may travel; their supporting conditions should travel with them or be consciously reconstructed.",
+      "anchors": {
+        "positive": "A legal principle is restated for a new institutional setting, and the author explicitly rebuilds the supporting procedural conditions.",
+        "negative": "An ethical rule formulated under specific social assumptions is applied universally while those assumptions are silently dropped.",
+        "neutral_or_na": "A purely formal system that claims no empirical or historical context."
+      },
+      "entry_gate": [
+        "material background condition",
+        "background change/omission"
+      ],
+      "primary_test": "background_substitution",
+      "execution_boundary": "deliberate abstraction or low contextual detail alone is not erasure"
+    },
+    "D10": {
+      "code": "D10",
+      "name": "Language Reification and Infinitization",
+      "group": "Structural Diagnosis",
+      "diagnostic_core": [
+        "Representational Limitation",
+        "Representation Boundary",
+        "Rp/Ro Separation"
+      ],
+      "questions": [
+        "What is the representation (Rp)?",
+        "What is the represented object or reality (Ro)?",
+        "Does the work distinguish Rp from Ro?",
+        "Does a definition become treated as the totality of the object?",
+        "Does a logical or linguistic structure become an ontological structure without an established bridge?",
+        "Is a finite, contextual expression treated as if it supplied infinite or universal coverage?"
+      ],
+      "boundary_note": "Representation is necessary for thought; the diagnostic issue is an unsupported collapse of representation into represented reality, or of the finite into the infinite.",
+      "anchors": {
+        "positive": "A scientific model is repeatedly described as a model, with explicit statements of what it abstracts away.",
+        "negative": "A classification scheme is treated as if it were the structure of reality itself, and dissent is treated as denial of reality.",
+        "neutral_or_na": "Ordinary technical vocabulary used with clear operational definitions and no ontological inflation."
+      },
+      "entry_gate": [
+        "representation and represented reality distinguishable",
+        "material identity/exhaustiveness pressure"
+      ],
+      "primary_test": "representation_reality_separation",
+      "execution_boundary": "definition/reference/pronoun alone is not reification"
+    },
+    "D11": {
+      "code": "D11",
+      "name": "Operational Viability",
+      "group": "Practical Evaluation",
+      "diagnostic_core": [
+        "Declared/Implied Practical Aim",
+        "Operational Guidance",
+        "Agents",
+        "Coordination",
+        "Resources",
+        "Timescale",
+        "Feedback/Revision",
+        "Structural Barriers",
+        "Practice Match"
+      ],
+      "questions": [
+        "What practical role does the work itself claim or imply?",
+        "What action guidance is actually supplied?",
+        "Who must act, coordinate, authorize, fund, maintain, or revise the implementation?",
+        "What resources and timescale are required?",
+        "What feedback or revision mechanism exists?",
+        "What structural barriers stand between the theory and its intended practical role?"
+      ],
+      "boundary_note": "A purely theoretical work that does not claim a practical role should not be penalized. D11 may be N/A. Operational Viability is not Practical Desirability.",
+      "decision_tree": [
+        "Does the work claim or clearly imply a practical role? If No → N/A",
+        "If Yes → Score against the match between claimed role and supplied operational conditions."
+      ],
+      "anchors": {
+        "positive": "A policy proposal specifies responsible agents, resource requirements, feedback loops, and known institutional barriers.",
+        "negative": "A grand reform program states desirable end-states but supplies no agents, resources, or revision path.",
+        "neutral_or_na": "A pure metaphysical system that never claims to guide action."
+      },
+      "entry_gate": [
+        "declared or materially implied practical role"
+      ],
+      "primary_test": "theory_practice_match",
+      "execution_boundary": "no practical role => N/A"
+    },
+    "D12": {
+      "code": "D12",
+      "name": "Consequence Mapping",
+      "group": "Practical Evaluation",
+      "diagnostic_core": [
+        "Implementation",
+        "Consequence Identification",
+        "Predictability",
+        "Reversibility",
+        "Distribution",
+        "Temporal Development",
+        "Irreducibility",
+        "Responsibility Pathways",
+        "Secondary/Cumulative/Reflexive Effects"
+      ],
+      "questions": [
+        "What implementation or action is being considered?",
+        "Which consequences have actually occurred, and which are only foreseeable?",
+        "Who receives benefits, burdens, risks, or responsibilities?",
+        "Are consequences reversible or irreversible?",
+        "Over what timescales do they unfold?",
+        "Are secondary, cumulative, or reflexive effects considered?",
+        "Is responsibility for consequences structurally located?"
+      ],
+      "boundary_note": "Ordinary causal explanation inside a theory is not the same as consequence mapping of the theory's own practical uptake. D12 may be N/A for purely explanatory works.",
+      "decision_tree": [
+        "Does the work claim or clearly imply practical uptake? If No → N/A",
+        "If Yes → Score the completeness and structural differentiation of consequence analysis."
+      ],
+      "anchors": {
+        "positive": "A technology assessment distinguishes direct effects, distributional effects, irreversible risks, and feedback onto the technology itself.",
+        "negative": "A transformative social proposal asserts only intended benefits and treats unintended consequences as outside its concern.",
+        "neutral_or_na": "A historical explanation of past events that does not propose present implementation."
+      },
+      "entry_gate": [
+        "implementation/action pathway enters practice"
+      ],
+      "primary_test": "consequence_mapping",
+      "execution_boundary": "ordinary theoretical implication is not implementation consequence; no implementation => N/A"
+    }
+  },
+  "integrated_conclusion_fields": [
+    "theory_position",
+    "foundational_evidential_basis",
+    "supported_explanatory_domain",
+    "application_boundary",
+    "major_explanatory_strengths",
+    "unresolved_structural_conditions",
+    "evidential_status",
+    "overall_structural_profile",
+    "reference_use_boundary"
+  ],
+  "package_version": "1.0.0",
+  "execution_contract": [
+    "Input & Evidence Layer",
+    "Semantic Reconstruction",
+    "D1-D12 Entry Gates",
+    "Primary Tests",
+    "Boundary Tests",
+    "Evidence Sufficiency",
+    "Cross-Dimensional Adjudication",
+    "Scoring & Confidence",
+    "Theory Boundary Reconstruction",
+    "Integrated Conclusion",
+    "Diagnostic Self-Audit",
+    "Final Report Generator"
+  ],
+  "global_execution_rules": {
+    "stone_principle": "Diagnose what structural condition is present without deciding whether the target ought to be accepted, rejected, preferred, preserved, replaced, or implemented.",
+    "diagnosis_before_scoring": "Evidence -> Structural Identification -> Dimension Classification -> Dependency/Extent -> Severity -> Score.",
+    "positive_gate": "Absence of defect is not positive evidence. Positive scores require active structural management.",
+    "zero": "Evaluated; no significant positive or negative structural condition established.",
+    "IE": "Potentially applicable but evidence is insufficient.",
+    "NA": "Not applicable under declared target/scope.",
+    "dedup": "Related Diagnosis != Duplicate Penalty. Reuse evidence only for distinct mechanisms; distinguish source conditions from propagated effects."
+  }
+}

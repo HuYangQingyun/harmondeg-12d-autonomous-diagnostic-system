@@ -1,0 +1,241 @@
+{
+  "framework_version": "Harmondeg 12-D Autonomous Diagnostic System v1.0",
+  "target": "Quick Start Demonstration",
+  "scope": "Entire supplied source",
+  "operating_mode": "AI-Assisted Closed-Source",
+  "external_evidence_used": false,
+  "evidence_basis": "User-supplied source only",
+  "evidence_packet_hash": "9404e7238c15513189ca62f1fb84579ab6d8effb4bf46fedd0d4e32125e5c606",
+  "semantic_reconstruction": {
+    "sentence_count": 6,
+    "key_terms": [
+      "demonstration",
+      "claim",
+      "example",
+      "limited",
+      "stated",
+      "condition",
+      "remains",
+      "present",
+      "quick",
+      "start",
+      "source",
+      "short"
+    ],
+    "scope_limiters": [
+      [
+        1,
+        "Quick Start Demonstration Source This short demonstration makes one limited claim."
+      ],
+      [
+        2,
+        "Only within the supplied example, a conclusion is treated as supported while the stated condition remains present."
+      ],
+      [
+        4,
+        "The claim is limited to the present analytical act and does not establish persistence across all times."
+      ],
+      [
+        6,
+        "The text remains a theoretical demonstration only."
+      ]
+    ],
+    "universal_claims": [
+      [
+        4,
+        "The claim is limited to the present analytical act and does not establish persistence across all times."
+      ]
+    ],
+    "first_person": [
+      [
+        3,
+        "I examine the claim from the same first-person position throughout this example."
+      ]
+    ],
+    "third_person": [
+      [
+        1,
+        "Quick Start Demonstration Source This short demonstration makes one limited claim."
+      ]
+    ],
+    "temporal": [
+      [
+        2,
+        "Only within the supplied example, a conclusion is treated as supported while the stated condition remains present."
+      ],
+      [
+        4,
+        "The claim is limited to the present analytical act and does not establish persistence across all times."
+      ]
+    ],
+    "premise_markers": [
+      [
+        5,
+        "Assume that the stated condition is part of the example."
+      ]
+    ],
+    "category_markers": [],
+    "representation_markers": [],
+    "practical": [],
+    "consequence": []
+  },
+  "dimensions": {
+    "D1": {
+      "status": "scored",
+      "score": 0,
+      "confidence": "Medium",
+      "evidence": "No decisive passage-level trigger established.",
+      "structural_observation": "Potential level markers were reviewed; no unsupported cross-level transition is established automatically.",
+      "structural_impact": "No independent structural effect assigned without a demonstrated transition.",
+      "score_rationale": "Level vocabulary alone does not satisfy D1.",
+      "active_management_evidence": false,
+      "name": "Level Collapse"
+    },
+    "D2": {
+      "status": "scored",
+      "score": 2,
+      "confidence": "Medium",
+      "evidence": "S1: Quick Start Demonstration Source This short demonstration makes one limited claim. | S2: Only within the supplied example, a conclusion is treated as supported while the stated condition remains present. | S4: The claim is limited to the present analytical act and does not establish persistence across all times.",
+      "structural_observation": "Explicit scope-limiting language is present.",
+      "structural_impact": "The text actively constrains at least part of its claimed range.",
+      "score_rationale": "Positive score reflects active scope management, not mere absence of overreach.",
+      "active_management_evidence": true,
+      "name": "Scope Overreach"
+    },
+    "D3": {
+      "status": "IE",
+      "score": null,
+      "confidence": null,
+      "evidence": "",
+      "structural_observation": "",
+      "structural_impact": "",
+      "score_rationale": "",
+      "active_management_evidence": false,
+      "rationale": "Lexical repetition can be detected autonomously, but operative meaning change cannot be established reliably by the deterministic baseline without a semantic adapter.",
+      "name": "Definition Drift"
+    },
+    "D4": {
+      "status": "IE",
+      "score": null,
+      "confidence": null,
+      "evidence": "",
+      "structural_observation": "",
+      "structural_impact": "",
+      "score_rationale": "",
+      "active_management_evidence": false,
+      "rationale": "Multiple observer positions are present, but the baseline cannot determine whether transitions are unacknowledged or legitimate.",
+      "name": "Observer Ambiguity"
+    },
+    "D5": {
+      "status": "scored",
+      "score": 1,
+      "confidence": "Medium",
+      "evidence": "S2: Only within the supplied example, a conclusion is treated as supported while the stated condition remains present. | S4: The claim is limited to the present analytical act and does not establish persistence across all times.",
+      "structural_observation": "Temporal distinctions co-occur with explicit limiting language.",
+      "structural_impact": "Some active temporal bounding is visible.",
+      "score_rationale": "Localized active temporal management.",
+      "active_management_evidence": true,
+      "name": "Temporal Flattening"
+    },
+    "D6": {
+      "status": "scored",
+      "score": 1,
+      "confidence": "Medium",
+      "evidence": "S5: Assume that the stated condition is part of the example.",
+      "structural_observation": "The text explicitly marks assumptions/premises or dependency conditions.",
+      "structural_impact": "Explicit premise disclosure is active structural management.",
+      "score_rationale": "A disclosed premise is not a hidden premise.",
+      "active_management_evidence": true,
+      "name": "Hidden Premises"
+    },
+    "D7": {
+      "status": "scored",
+      "score": 0,
+      "confidence": "Low",
+      "evidence": "No decisive passage-level trigger established.",
+      "structural_observation": "No material category transfer is established by the baseline.",
+      "structural_impact": "No category defect is asserted.",
+      "score_rationale": "Conservative 0.",
+      "active_management_evidence": false,
+      "name": "Category Confusion"
+    },
+    "D8": {
+      "status": "scored",
+      "score": 0,
+      "confidence": "Medium",
+      "evidence": "No decisive passage-level trigger established.",
+      "structural_observation": "No explicit P→C→P return edge is reconstructed from the supplied text.",
+      "structural_impact": "Self-reference alone is not treated as circularity.",
+      "score_rationale": "Strict loop gate prevents false-positive D8 scoring.",
+      "active_management_evidence": false,
+      "name": "Self-Reference Loops"
+    },
+    "D9": {
+      "status": "scored",
+      "score": 0,
+      "confidence": "Low",
+      "evidence": "S2: Only within the supplied example, a conclusion is treated as supported while the stated condition remains present. | S5: Assume that the stated condition is part of the example.",
+      "structural_observation": "Contextual material may be present or absent, but required-background dependency is not established automatically.",
+      "structural_impact": "Deliberate abstraction is not treated as erasure.",
+      "score_rationale": "Conservative 0 unless dependency can be reconstructed.",
+      "active_management_evidence": false,
+      "name": "Context Erasure"
+    },
+    "D10": {
+      "status": "scored",
+      "score": 0,
+      "confidence": "Low",
+      "evidence": "No decisive passage-level trigger established.",
+      "structural_observation": "No representation–reality collapse is established.",
+      "structural_impact": "No reification defect is asserted.",
+      "score_rationale": "Conservative 0.",
+      "active_management_evidence": false,
+      "name": "Language Reification and Infinitization"
+    },
+    "D11": {
+      "status": "N/A",
+      "score": null,
+      "confidence": "High",
+      "evidence": "",
+      "structural_observation": "",
+      "structural_impact": "",
+      "score_rationale": "",
+      "active_management_evidence": false,
+      "rationale": "No declared or materially detectable practical/operational implementation role is present in the supplied text.",
+      "name": "Operational Viability"
+    },
+    "D12": {
+      "status": "N/A",
+      "score": null,
+      "confidence": "High",
+      "evidence": "",
+      "structural_observation": "",
+      "structural_impact": "",
+      "score_rationale": "",
+      "active_management_evidence": false,
+      "rationale": "No implementation/action pathway entering practice is present under the supplied scope.",
+      "name": "Consequence Mapping"
+    }
+  },
+  "cross_dimensional_adjudication": {
+    "source_conditions": [],
+    "derived_effects": [],
+    "associated_conditions": [],
+    "propagation": []
+  },
+  "integrated_conclusion": {
+    "theory_position": "The supplied text is treated as the diagnostic target under the declared scope. Dominant extracted terms include: demonstration, claim, example, limited, stated, condition.",
+    "foundational_evidential_basis": "The run uses only the supplied source (6 segmented sentences). No external evidence is introduced.",
+    "supported_explanatory_domain": "The supported domain is limited to claims and structural relations recoverable from the supplied source. The autonomous baseline does not extend findings beyond that evidence packet.",
+    "application_boundary": "Any dimension requiring semantic distinctions not securely recoverable by the deterministic baseline is marked IE rather than guessed.",
+    "major_explanatory_strengths": "Active structural management was detected in: D2, D5, D6",
+    "unresolved_structural_conditions": "Insufficient-evidence dimensions: D3, D4",
+    "evidential_status": "Closed-source autonomous run. N/A dimensions: D11, D12. Confidence is reported independently from score.",
+    "overall_structural_profile": "Autonomous profile: positive=['D2', 'D5', 'D6']; negative=none; IE=['D3', 'D4']; N/A=['D11', 'D12']. This profile is structural, not an evaluative verdict.",
+    "reference_use_boundary": "Research-reference result only; subsequent interpretation and use remain the user's responsibility."
+  },
+  "self_audit": {
+    "passed": true,
+    "findings": []
+  }
+}
