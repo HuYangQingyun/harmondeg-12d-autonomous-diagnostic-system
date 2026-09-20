@@ -1,0 +1,13 @@
+HARMONDEG 12-D AUTONOMOUS DIAGNOSTIC SYSTEM v1.0
+RESEARCH REFERENCE NOTICE
+
+This system produces evidence-based structural diagnostic reference results under the Harmondeg Twelve-Dimensional Structural Evaluation Framework.
+
+Its output is not a legal, regulatory, judicial, institutional, or universally binding determination and does not constitute a final determination of truth or falsity.
+
+The framework diagnoses structural conditions. It does not decide whether a theory, argument, intellectual work, policy idea, scientific interpretation, philosophical system, or other target ought to be accepted, rejected, preferred, preserved, replaced, or implemented.
+
+Users remain responsible for subsequent interpretation, comparison, research conclusions, decisions, and actions.
+
+Framework: Harmondeg 12-D Autonomous Diagnostic System v1.0
+Package version: 1.0.0
